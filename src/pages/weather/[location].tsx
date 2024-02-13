@@ -9,7 +9,7 @@ interface WeatherDetailsProps {
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     const location = params?.location as string;
-    const apiKey = process.env.OPENWEATHERMAP_API_KEY as string;
+    const apiKey = process.env.WEATHER_API_KEY as string;
 
     try {
         const [currentWeatherRes, forecastRes] = await Promise.all([

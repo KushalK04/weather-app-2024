@@ -13,7 +13,7 @@ const Header: React.FC = () => {
 
   return (
     <header className='flex justify-around mt-10'>
-      <h1 className={styles.idkytailnotworkforthis}>Raindrops</h1>
+      <a href="/" className={styles.idkytailnotworkforthis}>Raindrops</a>
       <form onSubmit={handleSearch} className="flex gap-10">
         <input
           type="text"
