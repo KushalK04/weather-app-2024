@@ -1,5 +1,5 @@
 import { GetServerSideProps } from 'next';
-import { WeatherData, ForecastItem } from '../types/types';
+import { WeatherData, ForecastItem } from '../../../types/types';
 import Header from '../../components/header';
 import Weathfoot from '../../components/footer';
 
