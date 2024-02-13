@@ -49,15 +49,17 @@ export default function WeatherDetails({ currentWeather, fiveDayForecast }: Weat
             case "clear sky":
                 return "/ClearSkyAsset 4.svg";
             case "few clouds":
-                return "/GardensAsset 2.svg";
+                return "/rainAsset 8.svg";
+                case "broken clouds":
+                return "/rainAsset 8.svg";
             case "overcast clouds":
-                return "/GardensAsset 3.svg";
+                return "/rainAsset 9.svg";
             case "light rain":
                 return "/rainAsset 6.svg";
             case "snow":
                 return "/rainAsset 7.svg";
             default:
-                return "/GardensAsset 2.svg";
+                return "/ClearSkyAsset 4.svg";
         }
     };
 
