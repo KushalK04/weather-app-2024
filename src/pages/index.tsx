@@ -2,6 +2,7 @@ import { useState, FormEvent } from "react";
 import { useRouter } from "next/router";
 import styles from "../styles/Home.module.css";
 import Header from "../../components/header";
+import Weathfoot from "../../components/footer";
 
 export default function Home() {
   const [locationInput, setLocationInput] = useState("");
@@ -35,6 +36,7 @@ export default function Home() {
           <button type="submit" className='p-4 rounded-xl bg-blue-100'>Submit</button>
         </form>
       </main>
+      <Weathfoot/>
     </>
 
   );
