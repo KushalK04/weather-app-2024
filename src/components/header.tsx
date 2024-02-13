@@ -1,6 +1,6 @@
 import React, { useState, FormEvent } from "react";
 import { useRouter } from "next/router";
-import styles from '../src/styles/Home.module.css'
+import styles from '@/styles/Home.module.css'
 
 const Header: React.FC = () => {
   const [locationInput, setLocationInput] = useState("");
