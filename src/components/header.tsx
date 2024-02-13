@@ -3,12 +3,12 @@ import { useRouter } from "next/router";
 import styles from '@/styles/Home.module.css'
 
 const Header: React.FC = () => {
-  const [locationInput, setLocationInput] = useState("");
+  const [location, setLocation] = useState("");
   const router = useRouter();
 
   const handleSearch = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    await router.push(`/weather/${locationInput}`);
+    await router.push(`/weather/${location}`);
   };
 
   return (
@@ -19,8 +19,8 @@ const Header: React.FC = () => {
           type="text"
           placeholder="Enter location"
           className="p-4 rounded-xl bg-blue-100"
-          value={locationInput}
-          onChange={(e) => setLocationInput(e.target.value)}
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
         />
         <button type="submit" className="p-4 rounded-xl bg-blue-100">Search</button>
       </form>
