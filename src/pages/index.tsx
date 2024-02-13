@@ -1,16 +1,15 @@
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/router";
-import styles from "../styles/Home.module.css";
 import Header from "../components/header";
 import Weathfoot from "../components/footer";
 
 export default function Home() {
-  const [locationInput, setLocationInput] = useState("");
+  const [location, setLocation] = useState("");
   const router = useRouter();
 
   const handleSearch = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    await router.push(`/weather/${locationInput}`);
+    await router.push(`/weather/${location}`);
   };
 
   return (
@@ -30,8 +29,8 @@ export default function Home() {
             type="text"
             placeholder="Enter location"
             className='p-4 rounded-xl bg-blue-100'
-            value={locationInput}
-            onChange={(e) => setLocationInput(e.target.value)}
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
           />
           <button type="submit" className='p-4 rounded-xl bg-blue-100'>Submit</button>
         </form>
