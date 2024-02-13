@@ -1,8 +1,8 @@
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/router";
 import styles from "../styles/Home.module.css";
-import Header from "../../components/header";
-import Weathfoot from "../../components/footer";
+import Header from "../components/header";
+import Weathfoot from "../components/footer";
 
 export default function Home() {
   const [locationInput, setLocationInput] = useState("");
